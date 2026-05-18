@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#d4e4fa",
+                    "on-background": "#d4e4fa",
+                    "on-tertiary-fixed": "#161b2a",
+                    "on-secondary-fixed": "#281800",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed-variant": "#614000",
+                    "on-primary-fixed": "#171b27",
+                    "surface-bright": "#2c3a4c",
+                    "tertiary": "#c1c6da",
+                    "surface": "#051424",
+                    "surface-tint": "#c3c6d6",
+                    "primary": "#c3c6d6",
+                    "tertiary-fixed": "#dee2f7",
+                    "secondary-fixed-dim": "#ffba43",
+                    "surface-container": "#122131",
+                    "primary-fixed-dim": "#c3c6d6",
+                    "on-secondary-container": "#694600",
+                    "secondary-fixed": "#ffddaf",
+                    "on-surface-variant": "#c6c6cc",
+                    "inverse-primary": "#5a5e6b",
+                    "on-tertiary": "#2b3040",
+                    "inverse-on-surface": "#233143",
+                    "surface-container-low": "#0d1c2d",
+                    "secondary-container": "#fdaf00",
+                    "on-secondary": "#432c00",
+                    "primary-fixed": "#dfe2f2",
+                    "outline": "#909096",
+                    "surface-variant": "#273647",
+                    "surface-container-highest": "#273647",
+                    "secondary": "#ffd393",
+                    "tertiary-fixed-dim": "#c1c6da",
+                    "on-primary-container": "#797c8b",
+                    "surface-dim": "#051424",
+                    "tertiary-container": "#0c111f",
+                    "on-error": "#690005",
+                    "on-tertiary-container": "#787c8f",
+                    "on-error-container": "#ffdad6",
+                    "background": "#051424",
+                    "on-primary": "#2c303c",
+                    "surface-container-lowest": "#010f1f",
+                    "error-container": "#93000a",
+                    "primary-container": "#0d111c",
+                    "on-surface": "#d4e4fa",
+                    "outline-variant": "#46464c",
+                    "on-primary-fixed-variant": "#434653",
+                    "surface-container-high": "#1c2b3c",
+                    "on-tertiary-fixed-variant": "#414657"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "gutter": "12px",
+                    "xl": "40px",
+                    "unit": "4px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "sm": "8px",
+                    "container-margin": "20px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Geist"],
+                    "body-base": ["Geist"],
+                    "display-lg": ["Geist"],
+                    "data-value": ["JetBrains Mono"],
+                    "data-label": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "body-base": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "display-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "data-value": ["14px", {"lineHeight": "1", "letterSpacing": "0", "fontWeight": "400"}],
+                    "data-label": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-glass {
+            background: rgba(18, 33, 49, 0.4);
+            backdrop-filter: blur(12px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .active-glow {
+            border: 1px solid #ffd393;
+            box-shadow: 0 0 20px rgba(253, 175, 0, 0.15);
+        }
+        .lumen-slider-track {
+            background: linear-gradient(to right, #051424, #ffd393);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen font-body-base">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full h-16 flex justify-between items-center px-container-margin bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+<h1 class="font-data-label text-headline-md tracking-tighter text-on-surface uppercase">LUMEN-TASK</h1>
+</div>
+<div class="flex items-center gap-md">
+<span class="font-data-label text-data-label text-on-surface-variant uppercase hidden md:block">Studio Mode: Active</span>
+<span class="material-symbols-outlined text-on-surface">account_circle</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-container-margin max-w-5xl mx-auto">
+<!-- Header Section -->
+<section class="mb-lg">
+<div class="flex items-baseline justify-between mb-sm">
+<h2 class="font-headline-md text-display-lg text-on-background">Productivity Presets</h2>
+<span class="font-data-label text-data-label text-secondary uppercase tracking-widest">v2.4.0-stable</span>
+</div>
+<p class="font-body-base text-on-surface-variant max-w-xl">
+                Precision lighting profiles engineered for cognitive performance and professional visual clarity.
+            </p>
+</section>
+<!-- Bento Grid Presets -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Focus Preset Card (Cool White) -->
+<div class="md:col-span-8 group relative overflow-hidden technical-glass rounded-xl p-lg flex flex-col justify-between min-h-[320px] transition-all duration-300 hover:border-primary/40">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-sm mb-xs">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(195,198,214,0.8)]"></span>
+<h3 class="font-data-label text-headline-md text-on-surface uppercase">Focus</h3>
+</div>
+<p class="font-data-label text-data-label text-on-surface-variant uppercase">Cool White | 5600K | 100% Intensity</p>
+</div>
+<div class="technical-glass px-sm py-xs rounded flex items-center gap-xs">
+<span class="material-symbols-outlined text-data-value" style="font-size: 16px;">timer</span>
+<span class="font-data-label text-data-label">45m REMAINING</span>
+</div>
+</div>
+<!-- Preview Area -->
+<div class="relative h-32 w-full mt-lg rounded-lg overflow-hidden bg-surface-container-low border border-white/5">
+<img alt="Focus Mode Preview" class="w-full h-full object-cover opacity-60 mix-blend-screen grayscale" data-alt="A professional minimalist home office desk at night, illuminated by a sharp, cool white overhead light that creates high-contrast shadows. The desk has a laptop and a notebook, with clinical and precise lighting focusing strictly on the workspace. The overall atmosphere is cold, productive, and technologically driven, featuring blue and silver tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaj8awNg_3b-GiiAb0h4lO5-a57rc1_nnonyKFk0CSYYpbos7Wv7iDcSjfBXp_owCSLICLeUF5B9kUJ3xxwP8Dh9WeNJRWvmxh9C1Km4vDPZZqz55LrIkDdPPQs2RdGekf40uV0JsE17ZZniQXbmMztcieDAQvhUnT3q4rnYTZNxx6kp2UwnP_j--sNeuZdikuRUX221vLtdSW0dfABI36gVWMzMgqwQBWJu8JOkzF4XijMHrq7-Qrb6rS7ZbMS_wFT12a3gZ2WXE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex gap-md">
+<div class="flex flex-col">
+<span class="font-data-label text-[10px] text-on-surface-variant uppercase">Blue Peak</span>
+<span class="font-data-value text-data-value text-primary">460nm</span>
+</div>
+<div class="flex flex-col">
+<span class="font-data-label text-[10px] text-on-surface-variant uppercase">Lux</span>
+<span class="font-data-value text-data-value text-primary">850</span>
+</div>
+</div>
+</div>
+<div class="mt-lg flex gap-md">
+<button class="flex-1 border border-primary text-on-surface font-data-label text-data-label py-md uppercase tracking-widest hover:bg-primary/10 transition-all">
+                        ACTIVATE
+                    </button>
+<button class="w-16 technical-glass flex items-center justify-center hover:bg-white/5">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<!-- Relax Preset Card (Warm Amber) -->
+<div class="md:col-span-4 technical-glass rounded-xl p-lg flex flex-col justify-between transition-all duration-300 hover:border-secondary/40">
+<div>
+<h3 class="font-data-label text-headline-md text-on-surface uppercase mb-xs">Relax</h3>
+<p class="font-data-label text-data-label text-on-surface-variant uppercase">Warm Amber | 2700K</p>
+</div>
+<div class="h-40 w-full my-md rounded-lg overflow-hidden bg-surface-container-low border border-white/5 relative">
+<img alt="Relax Mode Preview" class="w-full h-full object-cover opacity-40" data-alt="A cozy interior living space at dusk, bathed in a deep, warm amber glow from a single designer floor lamp. The light is soft and diffused, creating long, gentle shadows on a velvet armchair. The color palette is rich with oranges, deep reds, and warm browns, evoking a feeling of calm and restorative serenity in a high-end architectural setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_lP-Nc6bt3pAta0nJc_Q_2W5hhP6cUbZCViU3mCexxlvkqxhne9wPti75N-p9w4C6EWBZd1Y2bEo3T8TuvycRfZbupGFA5oI_xkt2f8-_5zl667GBd1KDEt2uEr5_lk6b14aziWRevcL4PJDXtJ1zSNXSe3voJ2wv_rGLx6sEVrfmIQOVYK0xRPrTONm5yo59LbXgpJG0KzGakd6E5snyC8kzG38tufZPba_Y6J0l-X-bXVKsjm7GaNDaJ2sZwU_alB5WalN95xE"/>
+<div class="absolute inset-0 bg-secondary/10"></div>
+</div>
+<button class="w-full border border-secondary text-secondary font-data-label text-data-label py-md uppercase tracking-widest hover:shadow-[0_0_15px_rgba(253,175,0,0.2)] transition-all">
+                    ACTIVATE
+                </button>
+</div>
+<!-- Video-Call Mode (Specialized) -->
+<div class="md:col-span-12 active-glow technical-glass rounded-xl p-lg flex flex-col md:flex-row gap-lg items-center relative overflow-hidden">
+<!-- Active Indicator -->
+<div class="absolute top-0 right-0 px-md py-sm bg-secondary text-on-secondary font-data-label text-[10px] uppercase font-bold tracking-tighter">
+                    CURRENTLY ACTIVE
+                </div>
+<div class="w-full md:w-1/3">
+<div class="mb-md">
+<h3 class="font-data-label text-headline-md text-secondary uppercase mb-xs">Video-Call</h3>
+<p class="font-data-label text-data-label text-on-surface uppercase">Skin Tone Optimization</p>
+</div>
+<p class="font-body-base text-on-surface-variant text-sm mb-lg">
+                        AI-driven spectral balancing tailored to your complexion for professional-grade virtual presence.
+                    </p>
+<div class="flex items-center gap-md">
+<div class="flex flex-col">
+<span class="font-data-label text-[10px] text-on-surface-variant uppercase">CRI</span>
+<span class="font-data-value text-data-value text-secondary">98 Ra</span>
+</div>
+<div class="flex flex-col">
+<span class="font-data-label text-[10px] text-on-surface-variant uppercase">Face Tracking</span>
+<span class="font-data-value text-data-value text-secondary">ENABLED</span>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full flex flex-col gap-md">
+<!-- Technical Control visualization -->
+<div class="technical-glass rounded-lg p-md border-white/5">
+<div class="flex justify-between mb-sm">
+<span class="font-data-label text-data-label uppercase">Lumen Level</span>
+<span class="font-data-value text-data-value">72%</span>
+</div>
+<div class="h-2 w-full lumen-slider-track rounded-full relative">
+<div class="absolute top-1/2 left-[72%] -translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-[0_0_10px_#fff]"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div class="technical-glass rounded-lg p-md border-white/5 flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-secondary">camera_video</span>
+<span class="font-data-label text-[10px] uppercase">Sync Camera</span>
+</div>
+<div class="technical-glass rounded-lg p-md border-white/5 flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">face</span>
+<span class="font-data-label text-[10px] uppercase">Skin Balancer</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-64 h-48 rounded-lg overflow-hidden border border-secondary/30 relative">
+<img alt="Video Call Optimization" class="w-full h-full object-cover" data-alt="A close-up professional headshot of a person during a video call, illuminated by soft, flattering, and perfectly balanced lighting. The skin tones are natural and vibrant against a subtle, out-of-focus studio background. The lighting highlights facial features without harsh shadows, utilizing a mix of warm and cool temperatures to achieve a cinematic, professional broadcast look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrOnng5UKNOZz4Cla5VEAn04ppUe7rIsfutDiEUWtTptNidZyfpbILh3Mh1jwJ1iZWqUaAPXCRiUlMqD0sv30uccmznwLPW3PQ6jQer6Kp-6T8gaHP2LJVrfKP5tAhQxepfyCKC8-4dyg02Jv4-zCvwpjvHSTk5baHFYRP8u7vma2TCiLlWeSEpAkw5--Wu_eXTs4myNxX0xMV5CRsusL4QXE7p3_6nAA0nsSohAp0HcpzyYfSyBXvnFrydHuFfcZ9CvlEPXd6pLw"/>
+<div class="absolute inset-0 scanline opacity-20 pointer-events-none"></div>
+</div>
+</div>
+<!-- Custom Preset (Placeholder) -->
+<div class="md:col-span-12 border border-dashed border-white/10 rounded-xl p-lg flex items-center justify-center gap-md group hover:border-primary/40 hover:bg-white/5 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">add_circle</span>
+<span class="font-data-label text-headline-md text-on-surface-variant group-hover:text-on-surface uppercase">Create Custom Profile</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-gutter pb-safe bg-surface/90 dark:bg-surface/90 backdrop-blur-2xl border-t border-white/10 shadow-[0_-4px_24px_rgba(0,0,0,0.5)] z-50 rounded-t-full">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant pt-2 hover:bg-white/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">tune</span>
+<span class="font-data-label text-data-label uppercase">CONTROL</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant pt-2 hover:bg-white/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">schedule</span>
+<span class="font-data-label text-data-label uppercase">RHYTHM</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary border-t-2 border-secondary bg-secondary/5 pt-2 drop-shadow-[0_0_8px_rgba(253,175,0,0.6)] scale-105" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-data-label text-data-label uppercase">PRESETS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant pt-2 hover:bg-white/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-data-label text-data-label uppercase">ENERGY</span>
+</a>
+</nav>
+</body></html>

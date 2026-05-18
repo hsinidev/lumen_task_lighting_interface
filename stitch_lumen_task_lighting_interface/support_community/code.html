@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumen-Task | Support &amp; Community</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#122131",
+                    "surface-container-low": "#0d1c2d",
+                    "secondary-container": "#fdaf00",
+                    "surface-variant": "#273647",
+                    "secondary": "#ffd393",
+                    "error-container": "#93000a",
+                    "outline": "#909096",
+                    "primary-fixed": "#dfe2f2",
+                    "on-error-container": "#ffdad6",
+                    "on-surface-variant": "#c6c6cc",
+                    "on-surface": "#d4e4fa",
+                    "surface": "#051424",
+                    "secondary-fixed-dim": "#ffba43",
+                    "on-secondary-fixed": "#281800",
+                    "surface-container-lowest": "#010f1f",
+                    "tertiary-fixed-dim": "#c1c6da",
+                    "outline-variant": "#46464c",
+                    "on-tertiary": "#2b3040",
+                    "on-secondary": "#432c00",
+                    "on-secondary-container": "#694600",
+                    "inverse-primary": "#5a5e6b",
+                    "on-primary-fixed": "#171b27",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#434653",
+                    "surface-container-high": "#1c2b3c",
+                    "inverse-surface": "#d4e4fa",
+                    "inverse-on-surface": "#233143",
+                    "surface-tint": "#c3c6d6",
+                    "on-tertiary-fixed-variant": "#414657",
+                    "tertiary-container": "#0c111f",
+                    "secondary-fixed": "#ffddaf",
+                    "background": "#051424",
+                    "surface-bright": "#2c3a4c",
+                    "primary-container": "#0d111c",
+                    "on-error": "#690005",
+                    "surface-dim": "#051424",
+                    "tertiary-fixed": "#dee2f7",
+                    "on-tertiary-fixed": "#161b2a",
+                    "on-secondary-fixed-variant": "#614000",
+                    "on-primary": "#2c303c",
+                    "on-background": "#d4e4fa",
+                    "tertiary": "#c1c6da",
+                    "on-primary-container": "#797c8b",
+                    "surface-container-highest": "#273647",
+                    "primary-fixed-dim": "#c3c6d6",
+                    "primary": "#c3c6d6",
+                    "on-tertiary-container": "#787c8f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "lg": "24px",
+                    "xl": "40px",
+                    "sm": "8px",
+                    "gutter": "12px",
+                    "container-margin": "20px",
+                    "xs": "4px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "data-label": ["JetBrains Mono"],
+                    "body-base": ["Geist"],
+                    "display-lg": ["Geist"],
+                    "headline-md": ["Geist"],
+                    "data-value": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "data-label": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-base": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "display-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "data-value": ["14px", {"lineHeight": "1", "letterSpacing": "0", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .technical-glass {
+            background: rgba(5, 20, 36, 0.6);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .lumen-glow-amber {
+            box-shadow: 0 0 20px rgba(253, 175, 0, 0.15);
+        }
+        .active-glow {
+            border-color: #fdaf00;
+            box-shadow: 0 0 15px rgba(253, 175, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-base selection:bg-secondary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full h-16 bg-surface/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-container-margin">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+<h1 class="font-data-label text-headline-md tracking-tighter text-on-surface uppercase">LUMEN-TASK</h1>
+</div>
+<div class="hidden md:flex items-center gap-lg">
+<nav class="flex items-center gap-lg">
+<a class="font-data-label text-data-label text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="#">Control</a>
+<a class="font-data-label text-data-label text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="#">Rhythm</a>
+<a class="font-data-label text-data-label text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="#">Presets</a>
+<a class="font-data-label text-data-label text-secondary transition-colors duration-200 uppercase" href="#">Support</a>
+</nav>
+<span class="material-symbols-outlined text-on-surface ml-4">account_circle</span>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-on-surface">account_circle</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-container-margin max-w-6xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-xl text-center">
+<h2 class="font-display-lg text-display-lg mb-sm text-secondary">System Support</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Technical documentation and community-driven troubleshooting for professional lighting environments.</p>
+</section>
+<!-- Search Bar -->
+<div class="mb-xl relative group">
+<div class="absolute inset-y-0 left-md flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full bg-surface-container-high border-b border-outline focus:border-secondary focus:ring-0 transition-all duration-300 pl-12 pr-md py-lg font-data-label text-data-value uppercase placeholder:text-outline-variant" placeholder="SEARCH DOCUMENTATION OR TOPICS..." type="text"/>
+<div class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-focus-within:w-full transition-all duration-500 lumen-glow-amber"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- FAQ Section (Accordion) -->
+<div class="lg:col-span-7 space-y-md">
+<h3 class="font-data-label text-data-label text-on-surface-variant uppercase mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm">help</span>
+                    Technical FAQ
+                </h3>
+<!-- FAQ Item 1 -->
+<div class="technical-glass p-md rounded-lg group">
+<button class="w-full flex justify-between items-center text-left">
+<span class="font-headline-md text-body-base font-semibold group-hover:text-secondary transition-colors">How do I calibrate DMX address offsets?</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-transform">expand_more</span>
+</button>
+<div class="mt-md text-on-surface-variant text-data-value leading-relaxed border-l-2 border-secondary/20 pl-md">
+                        Navigate to the CONTROL tab and select the Device Matrix. Each fixture allows for a manual offset override in the 'Advanced Settings' pane. Ensure your master controller is in 'Listen' mode during calibration.
+                    </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="technical-glass p-md rounded-lg group">
+<button class="w-full flex justify-between items-center text-left">
+<span class="font-headline-md text-body-base font-semibold group-hover:text-secondary transition-colors">Synchronizing multi-zone rhythm maps</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary">expand_more</span>
+</button>
+<div class="mt-md text-on-surface-variant text-data-value hidden">
+                        Zones can be grouped under a single master clock in the Rhythm interface. Select 'Global Sync' to bind all active zone pulses to the primary BPM source.
+                    </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="technical-glass p-md rounded-lg group">
+<button class="w-full flex justify-between items-center text-left">
+<span class="font-headline-md text-body-base font-semibold group-hover:text-secondary transition-colors">Wireless signal latency troubleshooting</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary">expand_more</span>
+</button>
+</div>
+<!-- FAQ Item 4 -->
+<div class="technical-glass p-md rounded-lg group">
+<button class="w-full flex justify-between items-center text-left">
+<span class="font-headline-md text-body-base font-semibold group-hover:text-secondary transition-colors">Custom LUT profile integration</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Community Feedback Section -->
+<div class="lg:col-span-5 space-y-md">
+<h3 class="font-data-label text-data-label text-on-surface-variant uppercase mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm">forum</span>
+                    Community Feedback
+                </h3>
+<div class="flex flex-col gap-md">
+<!-- Comment Input -->
+<div class="technical-glass p-md rounded-lg border-secondary/30 active-glow">
+<textarea class="w-full bg-transparent border-none focus:ring-0 p-0 font-data-label text-data-value text-on-surface placeholder:text-outline-variant resize-none" placeholder="SHARE A TROUBLESHOOTING TIP OR FEEDBACK..." rows="3"></textarea>
+<div class="mt-sm flex justify-between items-center">
+<div class="flex gap-xs">
+<span class="material-symbols-outlined text-outline hover:text-secondary cursor-pointer">attach_file</span>
+<span class="material-symbols-outlined text-outline hover:text-secondary cursor-pointer">image</span>
+</div>
+<button class="bg-surface-container-highest border border-secondary text-secondary font-data-label text-data-label px-lg py-xs uppercase hover:bg-secondary hover:text-on-secondary transition-all">Post Update</button>
+</div>
+</div>
+<!-- Community Post 1 -->
+<div class="technical-glass p-md rounded-lg">
+<div class="flex justify-between items-start mb-sm">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center font-data-label text-on-secondary-container">AL</div>
+<div>
+<div class="font-data-label text-data-value text-on-surface">ARCHI_LUX</div>
+<div class="text-[10px] text-outline font-data-label uppercase">2 Hours Ago</div>
+</div>
+</div>
+<div class="bg-surface-container-highest px-xs py-0.5 rounded text-[10px] font-data-label text-secondary border border-secondary/20">TECH_TIP</div>
+</div>
+<p class="text-on-surface-variant text-data-value leading-snug">
+                            For anyone using the new 2.4Ghz bridge: I found that changing the channel to 11 reduced flickering in high-density environments.
+                        </p>
+<div class="mt-md flex items-center gap-md text-outline">
+<button class="flex items-center gap-xs hover:text-secondary"><span class="material-symbols-outlined text-sm">thumb_up</span> <span class="text-[10px] font-data-label">24</span></button>
+<button class="flex items-center gap-xs hover:text-secondary"><span class="material-symbols-outlined text-sm">chat_bubble</span> <span class="text-[10px] font-data-label">3</span></button>
+</div>
+</div>
+<!-- Community Post 2 -->
+<div class="technical-glass p-md rounded-lg">
+<div class="flex justify-between items-start mb-sm">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center font-data-label text-on-tertiary-container">SC</div>
+<div>
+<div class="font-data-label text-data-value text-on-surface">STUDIO_CORE</div>
+<div class="text-[10px] text-outline font-data-label uppercase">5 Hours Ago</div>
+</div>
+</div>
+</div>
+<p class="text-on-surface-variant text-data-value leading-snug">
+                            The rhythm engine's latest update is much snappier. Loving the sub-millisecond precision on the strobe triggers.
+                        </p>
+<div class="mt-md flex items-center gap-md text-outline">
+<button class="flex items-center gap-xs hover:text-secondary"><span class="material-symbols-outlined text-sm">thumb_up</span> <span class="text-[10px] font-data-label">12</span></button>
+<button class="flex items-center gap-xs hover:text-secondary"><span class="material-symbols-outlined text-sm">chat_bubble</span> <span class="text-[10px] font-data-label">1</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Resource -->
+<section class="mt-xl grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="relative h-48 rounded-lg overflow-hidden technical-glass border border-white/5 flex flex-col justify-end p-lg group cursor-pointer">
+<img alt="Technical Setup" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity" data-alt="A high-contrast close-up of a professional lighting control panel with glowing dials and indicators. The scene is dominated by deep indigo shadows and sharp amber light leaks reflecting off metallic surfaces, evoking a high-end technical studio environment. The atmosphere is precise and moody." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnUuqi4sVNk8jb23XTRhwVgLP77LfyEvkWufOn3ekYm8vtZ6VygPW8u8R9e4eubuYTGmYAFQ1vdZJLDnpI-J1AY2MI4wu2p3sGB_ks0ynFI2dNN2iWVN8Ng58yuP9b1fUMvSbvgxq1e5XP4oQr3AQwJVErY4Y9dVZMC_sZxMK5hu043Pi8xh1Rt86G1URYN4nWFwtgmH5GhSIkNRptOYc7nix6i8XlcN79O9hM3mhVsiEvO7WTlgr1d1eBqMPxe-3C8sNtvsn-ZFw"/>
+<div class="relative z-10">
+<h4 class="font-headline-md text-secondary">Setup Guide 2024</h4>
+<p class="font-data-label text-[10px] text-on-surface-variant uppercase tracking-widest">PDF DOCUMENTATION • 12.4 MB</p>
+</div>
+</div>
+<div class="relative h-48 rounded-lg overflow-hidden technical-glass border border-white/5 flex flex-col justify-end p-lg group cursor-pointer">
+<img alt="DMX Mapping" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity" data-alt="An expansive view of a modern theater lighting rig suspended from a dark ceiling. Multiple LED panels and spotlights cast complex overlapping shadows and beams of light in a dark-mode palette. The mood is cinematic and focuses on professional lighting architecture and hardware installation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf_Ld8tQGrlKyYxFyMqZoCL6-jUk3-JR5VvAmo6XxK7hiPLSm6kyvPuumxRg3rEh8-0LjVp3LQm3h786YSU6iqvdobBAx_ecRKmvQW_bWcG2r_qlnMPyMQVHe7eEdfudDp-tk5wM41ckeT-gDNZDidn4mIN23PonFSb7JFtBL7hzrLbmLcWynLwdq9bHcQn8AJH2EBarpO94xmrVasR3UjJrSC8NiPcJcDXtP-_5w90sWh1mAYw4QQ5S1MGI8YIBRTLS4V0r2isHs"/>
+<div class="relative z-10">
+<h4 class="font-headline-md text-secondary">DMX Architecture</h4>
+<p class="font-data-label text-[10px] text-on-surface-variant uppercase tracking-widest">INTERACTIVE COURSE • 45 MIN</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-20 bg-surface/90 backdrop-blur-2xl border-t border-white/10 flex justify-around items-center px-gutter pb-safe z-50 rounded-t-full shadow-[0_-4px_24px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col items-center justify-center text-on-surface-variant pt-2">
+<span class="material-symbols-outlined">tune</span>
+<span class="font-data-label text-data-label uppercase">CONTROL</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant pt-2">
+<span class="material-symbols-outlined">schedule</span>
+<span class="font-data-label text-data-label uppercase">RHYTHM</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant pt-2">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-data-label text-data-label uppercase">PRESETS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-secondary border-t-2 border-secondary bg-secondary/5 pt-2 drop-shadow-[0_0_8px_rgba(253,175,0,0.6)] scale-105">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-data-label text-data-label uppercase">ENERGY</span>
+</div>
+</nav>
+</body></html>
